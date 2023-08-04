@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+  max-width: 95rem;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem;
+  border: 1px solid transparent;
+  border-radius: 1rem;
+}
+.btn.bg--light {
+  @apply static bg-light text-dark border border-solid border-dark py-[1px];
+}
+.btn.bg--dark {
+  @apply bg-dark text-light border border-solid border-light py-[1px];
+}
+.btn.bg--light:hover {
+  @apply bg-gray-200 border border-solid border-dark;
+}
+.btn.bg--dark:hover {
+  @apply bg-gray-700 text-light border border-solid border-dark;
+}
+
+@layer components {
+  .header {
+    @apply bg-white fixed w-full border-b-gray-400 border-opacity-30 border-b-2;
+  }
+  .header .header__wrapper {
+    @apply flex items-center justify-between;
+  }
+  .header .branding {
+    @apply flex flex-row items-center gap-10;
+  }
+
+  .header .branding .imgcont {
+    @apply flex flex-row items-center w-[75px] h-[75px] lg:w-[75px] lg:h-[75px] overflow-hidden;
+  }
+
+  .header .header__nav {
+    @apply flex flex-col absolute bg-light top-[105%] left-[100rem] overflow-x-hidden  w-full  h-0 transition-all  lg:static lg:overflow-visible lg:flex-row;
+  }
+
+  .header .header__nav.open {
+    @apply h-[100vh] w-full left-[25%] transition-all p-5 drop-shadow-2xl  max-w-[45rem] lg:hidden;
+  }
+  .header .header__nav ul {
+    @apply flex flex-col gap-10  lg:flex-row lg:items-center  lg:font-bold;
+  }
+  .header .header__nav ul li {
+    @apply lg:text-dark;
+  }
+  .header .header__nav ul li:hover {
+    @apply lg:text-accent;
+  }
+  .header .header__actions {
+    @apply hidden lg:flex;
+  }
+  .header .header__actions ul li#findstore {
+    @apply mr-10 font-semibold;
+  }
+  .header .header__actions ul li#findstore a:hover {
+    @apply text-accent;
+  }
+  .header .header__actions ul li#findstore i {
+    @apply mr-2;
+  }
+  .header .header__actions ul {
+    @apply lg:flex-row lg:gap-2 lg:flex;
+  }
+  .header .header__nav .btn-group {
+    @apply pt-[3rem] border-b-gray-400 border-opacity-30 border-t-2 gap-0 lg:hidden;
+  }
+  .header .header__nav ul li#findstore {
+    @apply px-3 hover:text-accent lg:hidden;
+  }
+  .header .header__nav ul li#findstore i {
+    @apply mr-2;
+  }
+
+  .toggle__menu {
+    @apply flex flex-col gap-[.2rem] cursor-pointer hover:bg-slate-200 p-3 rounded-3xl transition-all ease-out duration-300 bg-opacity-30  lg:hidden;
+  }
+  .toggle__menu span {
+    @apply w-[1.5rem] h-[.2rem] bg-dark block rounded-full transition-all duration-150;
+  }
+
+  .toggle__menu.open span:first-child {
+    @apply bg-dark w-[1.5rem] h-[0.2rem] block rounded-full translate-y-[7px] rotate-45 transition-all duration-150;
+  }
+
+  .toggle__menu.open span:nth-child(2) {
+    @apply opacity-0 bg-dark;
+  }
+
+  .toggle__menu.open span:last-child {
+    @apply w-[1.5rem] bg-dark -translate-y-[5px] -rotate-45 transition-all duration-150;
+  }
+}
