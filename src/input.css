@@ -7,6 +7,9 @@
   margin: 0 auto;
   padding: 1rem;
 }
+body {
+  font-family: SoDoSans, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
 
 .btn {
   display: inline-block;
@@ -29,7 +32,7 @@
 
 @layer components {
   .header {
-    @apply bg-white fixed w-full border-b-gray-400 border-opacity-30 border-b-2;
+    @apply bg-white relative  w-full;
   }
   .header .header__wrapper {
     @apply flex items-center justify-between;
@@ -43,11 +46,11 @@
   }
 
   .header .header__nav {
-    @apply flex flex-col absolute bg-light top-[105%] left-[100rem] overflow-x-hidden  w-full  h-0 transition-all  lg:static lg:overflow-visible lg:flex-row;
+    @apply flex flex-col absolute bg-light top-[100%] left-[100rem] overflow-x-hidden  w-full  h-0 ease-in duration-200  lg:static lg:overflow-visible lg:flex-row;
   }
 
   .header .header__nav.open {
-    @apply h-[100vh] w-full left-[25%] transition-all p-5 drop-shadow-2xl  max-w-[45rem] lg:hidden;
+    @apply h-[100vh] w-full left-[25%] transition-all ease-in-out p-5  text-[1.2rem]  max-w-[45rem] duration-200 lg:h-fit;
   }
   .header .header__nav ul {
     @apply flex flex-col gap-10  lg:flex-row lg:items-center  lg:font-bold;
@@ -84,21 +87,87 @@
   }
 
   .toggle__menu {
-    @apply flex flex-col gap-[.2rem] cursor-pointer hover:bg-slate-200 p-3 rounded-3xl transition-all ease-out duration-300 bg-opacity-30  lg:hidden;
+    @apply flex flex-col gap-[.3rem] cursor-pointer font-light hover:bg-slate-200 p-[.6rem] rounded-full transition-all ease-out duration-300 bg-opacity-30  lg:hidden;
   }
   .toggle__menu span {
     @apply w-[1.5rem] h-[.2rem] bg-dark block rounded-full transition-all duration-150;
   }
 
   .toggle__menu.open span:first-child {
-    @apply bg-dark w-[1.5rem] h-[0.2rem] block rounded-full translate-y-[7px] rotate-45 transition-all duration-150;
+    @apply bg-dark w-[1.5rem] h-[0.2rem] block rounded-full translate-y-[6px] rotate-45 transition-all ease-out duration-300;
   }
 
   .toggle__menu.open span:nth-child(2) {
-    @apply opacity-0 bg-dark;
+    @apply opacity-0 bg-dark transition-all ease-out duration-300;
   }
 
   .toggle__menu.open span:last-child {
-    @apply w-[1.5rem] bg-dark -translate-y-[5px] -rotate-45 transition-all duration-150;
+    @apply w-[1.5rem] bg-dark -translate-y-[10px] -rotate-45 transition-all duration-300 ease-out;
   }
+}
+
+.buhok {
+  @apply h-[100vh] w-[100vh] left-0 top-[100%] opacity-0 bg-dark block absolute ease-in-out duration-200 lg:hidden;
+}
+
+.buhok.open {
+  @apply opacity-[.3] ease-in-out duration-200;
+}
+
+/* Kalbooooooooooooooooooooooooooo */
+.kalbo {
+  @apply bg-light;
+}
+.kalbo__wrapper {
+  @apply bg-ligreen pt-[2rem];
+}
+.kalbo__wrapper .kalbo__title {
+  @apply max-w-[80rem] mx-auto px-[1rem] py-[2rem] text-center text-[1.5rem] font-bold;
+}
+
+.kalbo__nav {
+  @apply max-w-[80rem] flex flex-wrap gap-[5rem] mx-auto justify-center bg-ligreen;
+}
+.kalbo__nav li {
+  @apply  text-dark;
+}
+.kalbo__nav li span{
+  @apply text-[1.2rem] font-bold ;
+}
+.kalbo__nav li.active {
+  @apply border-b-4 border-solid border-accent pb-[1rem] px-[1rem] justify-center;
+}
+.kalbo__nav li a {
+  @apply text-[.8rem]
+}
+.kalbo__desc__wrapper {
+  @apply bg-megreen p-[2rem];
+}
+.kalbo__item__content {
+  @apply hidden;
+}
+.kalbo__item__content img {
+  @apply w-[25rem] h-auto  px-[1rem];
+}
+.kalbo__item__content.active {
+  @apply flex gap-[2rem] items-center justify-center transition-all;
+}
+.kalbo__text h2 {
+  @apply text-[1.5rem] font-bold mb-[1rem] max-w-[20rem]
+}
+.kalbo__text p {
+  @apply flex flex-col max-w-[25rem]
+}
+/* .kalbo__text table tr {
+  @apply h-[5rem] flex flex-col;
+}
+.kalbo__text table tr td:first-child {
+  @apply font-semibold;
+} */
+
+.banner__green {
+  @apply bg-daccent sticky;
+}
+.banner__green__wrapper {
+  @apply max-w-[81rem] mx-auto font-bold text-light sticky;
 }
