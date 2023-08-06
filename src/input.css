@@ -126,38 +126,53 @@ body {
 }
 
 .kalbo__nav {
-  @apply max-w-[80rem] flex flex-wrap gap-[5rem] mx-auto justify-center bg-ligreen;
+  @apply relative flex flex-wrap gap-[5rem] mx-auto justify-center bg-ligreen ;
+}
+.kalbo__nav ul{
+  @apply gap-[5rem]
 }
 .kalbo__nav li {
-  @apply  text-dark;
+  @apply text-dark
 }
-.kalbo__nav li span{
-  @apply text-[1.2rem] font-bold ;
+.kalbo__nav li span {
+  @apply text-[1.4rem] font-bold lg:text-[1.5rem];
 }
-.kalbo__nav li.active {
-  @apply border-b-4 border-solid border-accent pb-[1rem] px-[1rem] justify-center;
-}
+
 .kalbo__nav li a {
-  @apply text-[.8rem]
+  @apply text-[.8rem];
 }
 .kalbo__desc__wrapper {
   @apply bg-megreen p-[2rem];
 }
 .kalbo__item__content {
-  @apply hidden;
+  @apply hidden transition-all;
 }
 .kalbo__item__content img {
   @apply w-[25rem] h-auto  px-[1rem];
 }
 .kalbo__item__content.active {
-  @apply flex gap-[2rem] items-center justify-center transition-all;
+  @apply flex flex-wrap gap-[2rem] items-center justify-center  transition-all;
+  
+
 }
 .kalbo__text h2 {
-  @apply text-[1.5rem] font-bold mb-[1rem] max-w-[20rem]
+  @apply text-[1.5rem] font-bold mb-[1rem] max-w-[20rem];
 }
 .kalbo__text p {
-  @apply flex flex-col max-w-[25rem]
+  @apply flex flex-col max-w-[25rem];
 }
+.slider {
+
+width:0;
+}
+
+.slider.active{
+  background-color: green;
+  height: 4px;
+  width: 100%;
+}
+
+
 /* .kalbo__text table tr {
   @apply h-[5rem] flex flex-col;
 }

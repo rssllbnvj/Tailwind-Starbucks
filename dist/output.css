@@ -942,15 +942,19 @@ body {
 }
 
 .kalbo__nav {
+  position: relative;
   margin-left: auto;
   margin-right: auto;
   display: flex;
-  max-width: 80rem;
   flex-wrap: wrap;
   justify-content: center;
   gap: 5rem;
   --tw-bg-opacity: 1;
   background-color: rgb(241 248 245 / var(--tw-bg-opacity));
+}
+
+.kalbo__nav ul {
+  gap: 5rem;
 }
 
 .kalbo__nav li {
@@ -959,19 +963,14 @@ body {
 }
 
 .kalbo__nav li span {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 700;
 }
 
-.kalbo__nav li.active {
-  justify-content: center;
-  border-bottom-width: 4px;
-  border-style: solid;
-  --tw-border-opacity: 1;
-  border-color: rgb(0 117 74 / var(--tw-border-opacity));
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-bottom: 1rem;
+@media (min-width: 1024px) {
+  .kalbo__nav li span {
+    font-size: 1.5rem;
+  }
 }
 
 .kalbo__nav li a {
@@ -986,6 +985,9 @@ body {
 
 .kalbo__item__content {
   display: none;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 
 .kalbo__item__content img {
@@ -997,6 +999,7 @@ body {
 
 .kalbo__item__content.active {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 2rem;
@@ -1016,6 +1019,16 @@ body {
   display: flex;
   max-width: 25rem;
   flex-direction: column;
+}
+
+.slider {
+  width:0;
+}
+
+.slider.active{
+  background-color: green;
+  height: 4px;
+  width: 100%;
 }
 
 /* .kalbo__text table tr {
