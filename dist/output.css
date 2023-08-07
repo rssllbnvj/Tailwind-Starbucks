@@ -1471,8 +1471,6 @@ width:0;
 
 @media (min-width: 1024px) {
   .cash__item {
-    margin-left: auto;
-    margin-right: auto;
     display: flex;
   }
 }
@@ -1502,8 +1500,8 @@ width:0;
 
 @media (min-width: 1024px) {
   .cash__item__content {
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 3rem;
+    margin-right: 3rem;
   }
 }
 

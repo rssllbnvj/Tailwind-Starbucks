@@ -343,7 +343,7 @@ width:0;
   @apply text-center text-[.9rem] font-medium mb-[1rem] pb-5;
 }
 .cash__item{
-  @apply lg:flex lg:mx-auto 
+  @apply lg:flex
 }
 .cash__item__title p:first-child{
   @apply text-[1.3rem]
@@ -355,7 +355,7 @@ width:0;
   @apply py-[3rem]
 }
 .cash__item__content {
-  @apply flex py-[1.5rem] gap-5 lg:mx-auto
+  @apply flex py-[1.5rem] gap-5 lg:mx-[3rem]
 }
 .cash__item__content img {
   @apply w-[7rem] 
