@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+    mode: "jit",
     content: ["./dist/**/*.{html,js}"],
     theme: {
         extend: {
@@ -9,8 +10,11 @@ module.exports = {
                 accent: '#00754a',
                 daccent: '#1e3932',
                 ligreen: '#f1f8f5',
-                megreen: '#d4e9e2'
-            }
+                megreen: '#d4e9e2',
+                star: '#D0EAE4',
+                cream: '#f2f0eb'
+            },
+
         },
     },
     plugins: ['prettier-plugin-tailwindcss'],
