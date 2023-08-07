@@ -14,7 +14,13 @@ module.exports = {
                 star: '#D0EAE4',
                 cream: '#f2f0eb'
             },
-
+            backgroundImage: {
+                'pattern': "url('../img/pattern.png')",
+            },
+            gridAutoColumns: {
+                '2fr': 'minmax(0, 2fr)',
+                '3fr': 'minmax(0, 1fr)',
+            }
         },
     },
     plugins: ['prettier-plugin-tailwindcss'],

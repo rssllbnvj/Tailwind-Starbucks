@@ -130,7 +130,7 @@
 }
 
 .buhok {
-  @apply absolute bg-black top-[6.9rem] left-[0rem] w-[100vw] ease-in-out duration-300 opacity-30 lg:hidden;
+  @apply absolute bg-black top-[6.8rem] left-[0rem] w-[100vw] ease-in-out duration-300 opacity-30 lg:hidden;
 }
 .buhok.open {
   @apply right-[0rem] h-[100vh] ease-in-out duration-300;
@@ -292,7 +292,7 @@ width:0;
   @apply text-accent underline;
 }
 .easystrtd__item__text a:hover {
-  @apply no-underline
+  @apply no-underline;
 }
 .extras {
   @apply lg:p-[5rem];
@@ -306,13 +306,13 @@ width:0;
 }
 
 .extras__number img {
-  @apply  flex items-center justify-center w-[15rem]  text-accent text-[1.5rem] font-bold lg:w-[7rem] lg:static lg:flex lg:items-center lg:text-center;
+  @apply flex items-center justify-center w-[15rem]  text-accent text-[1.5rem] font-bold lg:w-[7rem] lg:static lg:flex lg:items-center lg:text-center;
 }
 .extras__item__text h3 {
-  @apply font-bold lg:text-[1.5rem] mb-5
+  @apply font-bold lg:text-[1.5rem] mb-5;
 }
 .extras__item__text p {
-  @apply text-[1rem]  pb-5
+  @apply text-[1rem]  pb-5;
 }
 .extras__title h2 {
   @apply text-center text-[1.5rem] font-bold mb-[1rem];
@@ -323,7 +323,7 @@ width:0;
 }
 
 .extras__item__text a {
-  @apply text-accent underline
+  @apply text-accent underline;
 }
 .extras__item__text a:hover {
   @apply no-underline;
@@ -331,9 +331,8 @@ width:0;
 
 /* CASH SECTION */
 .cash {
-  @apply bg-cream py-[3rem]
+  @apply bg-cream py-[3rem];
 }
-
 
 .cash__title h2 {
   @apply text-center text-[1.3rem] font-bold mb-[1rem];
@@ -342,28 +341,76 @@ width:0;
 .cash__title p {
   @apply text-center text-[.9rem] font-medium mb-[1rem] pb-5;
 }
-.cash__item{
-  @apply lg:flex
+.cash__item {
+  @apply lg:flex;
 }
-.cash__item__title p:first-child{
-  @apply text-[1.3rem]
+.cash__item__title p:first-child {
+  @apply text-[1.3rem];
 }
 .cash__item:first-child {
-  @apply pb-5 border-b-2 border-gray-300
+  @apply pb-5 border-b-2 border-gray-300;
 }
 .cash__item:last-child {
-  @apply py-[3rem]
+  @apply py-[3rem];
 }
 .cash__item__content {
-  @apply flex py-[1.5rem] gap-5 lg:mx-[3rem]
+  @apply flex py-[1.5rem] gap-5 lg:mx-[3rem];
 }
 .cash__item__content img {
-  @apply w-[7rem] 
+  @apply w-[7rem];
 }
 
-.cash__item__content__text h3{
-  @apply font-bold mb-5
+.cash__item__content__text h3 {
+  @apply font-bold mb-5;
 }
-.cash__item__content__text p{
-  @apply lg:max-w-[20rem]
+.cash__item__content__text p {
+  @apply lg:max-w-[20rem];
+}
+
+.rewards {
+  @apply bg-pattern bg-repeat bg-cover lg:p-[2rem]
+
+}
+
+.rewards__wrapper {
+  @apply bg-megreen flex flex-col items-center text-center py-[5rem] lg:flex lg:flex-row lg:items-center lg:justify-center lg:gap-[8rem] lg:py-[3rem]
+}
+
+.rewards__wrapper #vstar1 {
+  @apply w-[20rem] hidden lg:flex
+}
+.rewards__wrapper #vstar2 {
+  @apply w-[20rem] hidden lg:flex
+}
+
+.rewards__content h2 {
+  @apply text-[1.5rem] font-semibold mb-[1rem] lg:text-[2rem]
+}
+.rewards__content img {
+  @apply w-[15rem] mx-auto p-[2rem];
+}
+
+.rewards__content p {
+  @apply lg:text-[1rem] lg:max-w-[35rem] lg:mx-auto;
+}
+
+.rewards__content .btn.bg--lgreen {
+  @apply mx-[4rem] mt-5 lg:w-[220px] lg:mx-auto lg:font-bold
+}
+.rewards__stars img:first-child {
+  @apply absolute;
+}
+
+.rewards__stars img:last-child {
+  @apply absolute translate-y-[29rem] translate-x-[25rem];
+}
+.rewards__stars {
+  @apply lg:hidden;
+}
+
+.rewards__wrapper #delta {
+  @apply text-accent underline
+}
+.rewards__wrapper #delta:hover {
+  @apply no-underline
 }
