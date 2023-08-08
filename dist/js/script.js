@@ -1,3 +1,5 @@
+const drop = document.querySelectorAll(".header__nav ul.nav li");
+const drop1 = document.querySelectorAll(".stardrop__nav ul.nav li");
 const headerNav = document.querySelector(".header__nav");
 const toggleMenu = document.querySelector(".toggle__menu");
 const buhokoverlay = document.querySelector(".buhok");
@@ -60,3 +62,18 @@ function removeActiveContent() {
         kalbo.classList.remove("active");
     });
 }
+
+
+drop.forEach((link) => {
+    link.addEventListener("click", () => {
+        link.nextElementSibling.classList.toggle("open");
+        link.querySelector("i").classList.toggle("open");
+    });
+});
+
+drop1.forEach((link) => {
+    link.addEventListener("click", () => {
+        link.querySelector(".drop1").classList.toggle("open");
+        link.querySelector("i").classList.toggle("open");
+    });
+});

@@ -12,7 +12,9 @@ module.exports = {
                 ligreen: '#f1f8f5',
                 megreen: '#d4e9e2',
                 star: '#D0EAE4',
-                cream: '#f2f0eb'
+                cream: '#f2f0eb',
+                offwhite: '#f9f9f9',
+                BlackSoft: 'rgba(0, 0, 0, .58)'
             },
             backgroundImage: {
                 'pattern': "url('../img/pattern.png')",
