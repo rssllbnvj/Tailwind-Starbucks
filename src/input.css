@@ -281,11 +281,11 @@ width:0;
   @apply lg:grid lg:grid-cols-3 lg:gap-[8rem]  lg:mx-auto;
 }
 .easystrtd__item {
-  @apply flex items-start pb-5 lg:flex lg:flex-col lg:text-center lg:items-center lg:py-5 lg:max-w-[25rem];
+  @apply flex justify-center pb-5 lg:flex lg:flex-col lg:text-center lg:items-center lg:py-5 lg:max-w-[25rem];
 }
 
 .easystrtd__number span {
-  @apply w-[3rem] h-[3rem] mx-3  flex items-center justify-center border-2 border-accent rounded-full text-accent text-[1.5rem] font-bold lg:static lg:flex lg:items-center lg:text-center;
+  @apply w-[3rem] h-[3rem] mx-3 flex items-center justify-center border-2 border-accent rounded-full text-accent text-[1.5rem] font-bold lg:static lg:flex lg:items-center lg:text-center;
 }
 .easystrtd__item__text h3 {
   @apply font-bold py-5;
@@ -438,10 +438,39 @@ width:0;
 .policy__text h2 {
   @apply text-BlackSoft;
 }
-
-.footer__wrapper ul li {
-  @apply pr-[.5rem];
+.footer__item {
+  @apply pb-[3rem]  lg:mx-5;
 }
+.footer__item ul.drop {
+  @apply hidden  lg:block   pt-5 transition-all ease-in duration-300;
+}
+
+.footer__item ul.drop.open {
+  @apply flex flex-col gap-5 transition-all ease-in duration-300 lg:block;
+}
+
+.footer__item ul.drop li {
+  @apply text-[.9rem] text-BlackSoft hover:text-dark  lg:max-w-[15rem] lg:pb-5;
+}
+.footer__nav ul {
+  @apply lg:flex lg:gap-[1.5rem];
+}
+.footer__item #ftitle {
+  @apply font-medium flex justify-between  lg:pb-5 lg:cursor-default;
+}
+.footer__item #ftitle i {
+  @apply lg:hidden transition-all ease-in duration-200;
+}
+.footer__item #ftitle i.open {
+  @apply rotate-90 transition-all ease-in duration-200;
+}
+.footer__nav {
+  @apply border-b-2 border-dark py-[3rem] border-opacity-20;
+}
+
+/* .footer__wrapper ul li {
+  @apply pr-[.5rem];
+} */
 
 .socmed__text ul li {
   @apply my-[1.3rem] flex flex-wrap hover:underline items-center;

@@ -80,7 +80,7 @@
         "yaml": "^2.3.1"
     },
     "scripts": {
-        "test": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch --watch-delay 0 --watch-workers 4"
+        "test": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch --watch-delay 0"
     },
     "keywords": [],
     "author": "",
