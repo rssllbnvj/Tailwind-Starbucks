@@ -462,7 +462,7 @@ width:0;
   @apply lg:hidden transition-all ease-in duration-200;
 }
 .footer__item #ftitle i.open {
-  @apply rotate-90 transition-all ease-in duration-200;
+  @apply rotate-[270deg]  transition-all ease-in-out duration-200;
 }
 .footer__nav {
   @apply border-b-2 border-dark py-[3rem] border-opacity-20;
