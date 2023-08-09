@@ -572,7 +572,7 @@ video {
   background: white;
   position: fixed;
   width: 100%;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-bottom: 2px solid #00000015;
   z-index: 998;
 }
 
@@ -942,13 +942,23 @@ video {
 }
 
 @font-face {
-  font-family: "Poppins";
+  font-family: "SoDoSans";
 
-  src: url("../fonts/Poppins-Regular.woff");
+  src: url("../fonts/SoDoSans-Regular.woff");
+}
+
+@font-face {
+  font-family: "SoDoSansBold";
+
+  src: url("../fonts/SoDoSans-Bold.woff");
 }
 
 body {
-  font-family: Poppins;
+  font-family: SoDoSans;
+}
+
+*[font-weight="bold"] {
+  font-family: SodoSansBold;
 }
 
 .container {
@@ -1045,7 +1055,7 @@ body {
   font-size: 1rem;
 }
 
-.btn.bg--wtrnsparent{
+.btn.bg--wtrnsparent {
   background: transparent;
   color: #ffffff;
   border: 1px solid #ffffff;
@@ -1529,9 +1539,16 @@ width:0;
 
 .extras__title h2 {
   margin-bottom: 1rem;
+  margin-top: 3rem;
   text-align: center;
   font-size: 1.5rem;
   font-weight: 700;
+}
+
+@media (min-width: 1024px) {
+  .extras__title h2 {
+    margin-top: 0px;
+  }
 }
 
 .extras__title p {
@@ -1985,6 +2002,8 @@ width:0;
   justify-content: center;
   padding-top: 3rem;
   padding-bottom: 3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   text-align: center;
 }
 
@@ -1994,6 +2013,8 @@ width:0;
     align-items: center;
     padding-top: 10rem;
     padding-bottom: 10rem;
+    padding-left: 0px;
+    padding-right: 0px;
   }
 }
 
@@ -2012,6 +2033,10 @@ width:0;
     line-height: 1;
     line-height: 4rem;
   }
+
+  .kwadrado__content__text #tbf {
+    max-width: 25rem;
+  }
 }
 
 .kwadrado__content__text p {
@@ -2027,8 +2052,10 @@ width:0;
   }
 }
 
-.kwadrado .btn.bg--trnsparent,.btn.bg--wtrnsparent {
-  margin-top: 1.25rem;
+.kwadrado .btn.bg--trnsparent,
+.btn.bg--wtrnsparent {
+  margin-top: 3rem;
+  font-size: 1.2rem;
 }
 
 .kwadrado__wrapper #expiry {
@@ -2100,8 +2127,8 @@ width:0;
     padding-bottom: 5rem;
   }
 
-  .lg\:pt-\[10rem\] {
-    padding-top: 10rem;
+  .lg\:pt-\[8rem\] {
+    padding-top: 8rem;
   }
 
   .lg\:text-\[2rem\] {
