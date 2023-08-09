@@ -59,6 +59,23 @@ body {
   transition: 0.5s ease;
 }
 
+.btn.bg--trnsparent {
+  background: transparent;
+  color: #000000;
+  border: 1px solid #000000;
+  padding: 0.2rem 0.6rem;
+  border-radius: 9999px;
+  font-size: 1rem;
+}
+.btn.bg--wtrnsparent{
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  padding: 0.2rem 0.6rem;
+  border-radius: 9999px;
+  font-size: 1rem;
+}
+
 @layer components {
   .header {
     background: white;
@@ -456,7 +473,7 @@ width:0;
   @apply lg:flex lg:gap-[1.5rem];
 }
 .footer__item #ftitle {
-  @apply font-medium flex justify-between  lg:pb-5 lg:cursor-default;
+  @apply font-medium flex justify-between lg:text-[1.3rem]  lg:pb-5 lg:cursor-default;
 }
 .footer__item #ftitle i {
   @apply lg:hidden transition-all ease-in duration-200;
@@ -481,4 +498,36 @@ width:0;
 
 .socmed__container ul li i {
   @apply hover:bg-slate-200 p-[.5rem] rounded-full transition-all ease-out duration-300 bg-opacity-10;
+}
+
+
+
+.kwadrado__content {
+  @apply lg:grid lg:grid-cols-2;
+}
+
+.kwadrado__content {
+  @apply py-[1rem]
+}
+
+.kwadrado__content:nth-child(odd) img {
+  @apply lg:order-2;
+}
+.kwadrado__content__text {
+  @apply py-[3rem] items-center text-center h-[300]  justify-center lg:h-[659px] lg:items-center lg:py-[10rem];
+}
+
+.kwadrado__content__text h1 {
+  @apply font-bold text-[28px] mb-4 lg:text-5xl lg:max-w-[30rem] lg:mx-auto lg:leading-[4rem];
+}
+.kwadrado__content__text p {
+  @apply text-[22px] font-medium lg:max-w-[30rem] lg:mx-auto;
+}
+
+.kwadrado .btn.bg--trnsparent,.btn.bg--wtrnsparent {
+  @apply mt-5;
+}
+
+.kwadrado__wrapper #expiry {
+  @apply text-[.9rem] font-medium text-center p-[2rem] lg:flex lg:text-center lg:items-center lg:justify-center lg:max-w-[45rem] lg:mx-auto;
 }

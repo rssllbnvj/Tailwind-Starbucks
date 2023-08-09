@@ -15,7 +15,11 @@ module.exports = {
                 star: '#D0EAE4',
                 cream: '#f2f0eb',
                 offwhite: '#f9f9f9',
-                BlackSoft: 'rgba(0, 0, 0, .58)'
+                BlackSoft: 'rgba(0, 0, 0, .58)',
+                penk: '#eb81a5',
+                moss: '#006241',
+                lavender: '#8f8bf4',
+                yellow: '#f1ff67'
             },
             backgroundImage: {
                 'pattern': "url('../img/pattern.png')",
