@@ -1,7 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     mode: 'jit',
-    content: ["./dist/**/*.{html,js}"],
+    content: ["./dist/**/*.{html,js,tsx,jsx}"],
+    watch: {
+        poll: 500
+    },
     theme: {
         extend: {
 
@@ -27,4 +30,5 @@ module.exports = {
         },
     },
     plugins: ['prettier-plugin-tailwindcss'],
+
 }

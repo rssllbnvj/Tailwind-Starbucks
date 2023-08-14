@@ -46,3 +46,5 @@ drop.forEach((link) => {
         link.querySelector("i").classList.toggle("open");
     });
 });
+
+AOS.init();
