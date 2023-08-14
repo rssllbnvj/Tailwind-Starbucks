@@ -270,16 +270,19 @@ width:0;
   text-align: center;
   position: relative;
   width: 100%;
+  animation: fadeIn;
+  animation-duration: 3s;
 
   @media screen and (min-width: 1024px) {
     background-position-y: -1rem;
     background-size: contain;
     background-position-x: 55rem;
-
     height: 800px;
     text-align: unset;
     display: flex;
     align-items: center;
+    animation: fadeIn;
+    animation-duration: 3s;
   }
 }
 

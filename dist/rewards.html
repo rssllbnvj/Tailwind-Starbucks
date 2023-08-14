@@ -7,10 +7,12 @@
     <title>Starbucks - Rewards</title>
     <link rel="stylesheet" href="./output.css" />
     <script src="https://kit.fontawesome.com/a6726e13c6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../node_modules/animate.css/animate.css" />
+    <link href="../node_modules/aos/dist/aos.css" rel="stylesheet" />
 </head>
 
 <body>
-    <header class="header">
+    <header class="header" data-aos="fade-down" data-aos-easing="ease" data-aos-delay="100" data-aos-anchor-placement="top-center">
         <div class="container">
             <div class="header__wrapper">
                 <div class="branding">
@@ -55,7 +57,7 @@
         </div>
     </header>
 
-    <div class="subheader bg-[#1E3932] pt-[7rem]">
+    <div class="subheader bg-[#1E3932] sticky pt-[7rem]">
         <div class="container flex items-center justify-between">
             <h3 class="text-light text-[1.2rem] font-bold">
                 STARBUCKS REWARDS
@@ -488,8 +490,7 @@
                 <div class="footer__nav ">
                     <ul class="nav">
                         <div class="footer__item">
-                            <a id="ftitle" href="javascript:void()">About Us<i
-                                    class="fa-solid fa-chevron-right"></i></a>
+                            <a id="ftitle" href="javascript:void()">About Us<i class="fa-solid fa-chevron-right"></i></a>
                             <ul class="drop">
                                 <li><a href="">Our Company</a></li>
                                 <li><a href="">Our Coffee</a></li>
@@ -511,8 +512,7 @@
                             </ul>
                         </div>
                         <div class="footer__item">
-                            <a id="ftitle" href="javascript:void()">Social Impact<i
-                                    class="fa-solid fa-chevron-right"></i></a>
+                            <a id="ftitle" href="javascript:void()">Social Impact<i class="fa-solid fa-chevron-right"></i></a>
                             <ul class="drop">
                                 <li><a href="">People</a></li>
                                 <li><a href="">Planet</a></li>
@@ -520,8 +520,7 @@
                             </ul>
                         </div>
                         <div class="footer__item">
-                            <a id="ftitle" href="javascript:void()">For Business Partners<i
-                                    class="fa-solid fa-chevron-right"></i></a>
+                            <a id="ftitle" href="javascript:void()">For Business Partners<i class="fa-solid fa-chevron-right"></i></a>
                             <ul class="drop">
                                 <li><a href="">Landlord Support Center</a></li>
                                 <li><a href="">Suppliers</a></li>
@@ -530,8 +529,7 @@
                             </ul>
                         </div>
                         <div class="footer__item">
-                            <a id="ftitle" href="javascript:void()">Orders and Pick Up<i
-                                    class="fa-solid fa-chevron-right"></i></a>
+                            <a id="ftitle" href="javascript:void()">Orders and Pick Up<i class="fa-solid fa-chevron-right"></i></a>
                             <ul class="drop">
                                 <li><a href="">Order on the App</a></li>
                                 <li><a href="">Order on the Web</a></li>
@@ -591,7 +589,7 @@
 
         </div>
     </footer>
-
+    <script src="../node_modules/aos/dist/aos.js"></script>
     <script src="./js/script.js"></script>
 </body>
 
